@@ -1,12 +1,17 @@
 package project;
-import java.util.HashSet;;
+import java.util.HashSet;
 
 public class Runner {
 
 	public static void main(String[] args) {
-		Employee e1 = new Employee("Test1", "1234Qwerty", "test@test.com");
-		Employee e2 = new Employee("Test2", "112233", "test@test2.com");
+		Employee e1 = new Employee("Test", "test12", "ex@ex.com");
+		Employee e2 = new Employee("Test", "test12", "ex@ex.com", 100000, 20);
 		HashSet<Employee> h = new HashSet<Employee>();
-		System.out.println(e1.equals(e1));
+		h.add(e1);
+		h.add(e2);
+		h.add(e1);
+		for(Employee e : h) {
+			System.out.println(e);
+		}
 	}
 }
